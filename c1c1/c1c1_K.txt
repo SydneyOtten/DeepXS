@@ -1,0 +1,85 @@
+Performing a regression on the K-Factor with randomly sampled inputs within certain parameter intervals.
+The initial learning rate is: 0.001 LR-factor: 2 The number of iterations is: 7 Epochs: 250 Batch size: 120 patience: 50
+Model summary: 
+None[-0.05997818 -0.041211   -0.03233201 ...,  0.04417386  0.04771402
+  0.05450195]
+iteration: 1 mape: 0.00107226848615 over 5 percent: 2 over 10 percent: 0
+
+target-values for samples with errors above 5 percent:
+[ 1.295491  1.262139]
+target-values for samples with errors above 10 percent:
+[]
+representation inputs for samples with errors above 5 percent:
+[[ -8.83778031e-01   4.67906392e-01  -8.96199988e-01   4.43650293e-01
+    1.86889499e+03   1.76308969e+03   3.58312250e+03]
+ [ -7.99962050e-01   6.00050596e-01  -8.17018650e-01   5.76611243e-01
+    1.80724374e+03   1.84523513e+03   1.05993248e+03]]
+representation inputs for samples with errors above 10 percent:
+[][-0.03273527 -0.03145141 -0.03106161 ...,  0.02903362  0.04370688
+  0.06248696]
+iteration: 2 mape: 0.000901326705563 over 5 percent: 1 over 10 percent: 0
+
+target-values for samples with errors above 5 percent:
+[ 1.262139]
+target-values for samples with errors above 10 percent:
+[]
+representation inputs for samples with errors above 5 percent:
+[[ -7.99962050e-01   6.00050596e-01  -8.17018650e-01   5.76611243e-01
+    1.80724374e+03   1.84523513e+03   1.05993248e+03]]
+representation inputs for samples with errors above 10 percent:
+[][-0.03082552 -0.03018176 -0.02834661 ...,  0.02832735  0.04176006
+  0.04189049]
+iteration: 3 mape: 0.000838953068729 over 5 percent: 0 over 10 percent: 0
+
+target-values for samples with errors above 5 percent:
+[]
+target-values for samples with errors above 10 percent:
+[]
+representation inputs for samples with errors above 5 percent:
+[]
+representation inputs for samples with errors above 10 percent:
+[][-0.03099244 -0.03049992 -0.02908187 ...,  0.02000902  0.02364815
+  0.03526028]
+iteration: 4 mape: 0.000785414597264 over 5 percent: 0 over 10 percent: 0
+
+target-values for samples with errors above 5 percent:
+[]
+target-values for samples with errors above 10 percent:
+[]
+representation inputs for samples with errors above 5 percent:
+[]
+representation inputs for samples with errors above 10 percent:
+[][-0.0313397  -0.03067968 -0.02948603 ...,  0.02005736  0.02334257
+  0.02589204]
+iteration: 5 mape: 0.000765591644481 over 5 percent: 0 over 10 percent: 0
+
+target-values for samples with errors above 5 percent:
+[]
+target-values for samples with errors above 10 percent:
+[]
+representation inputs for samples with errors above 5 percent:
+[]
+representation inputs for samples with errors above 10 percent:
+[][-0.03142802 -0.03027666 -0.02966608 ...,  0.02007641  0.02324316
+  0.02731673]
+iteration: 6 mape: 0.000760797403497 over 5 percent: 0 over 10 percent: 0
+
+target-values for samples with errors above 5 percent:
+[]
+target-values for samples with errors above 10 percent:
+[]
+representation inputs for samples with errors above 5 percent:
+[]
+representation inputs for samples with errors above 10 percent:
+[][-0.03145686 -0.02980947 -0.02973112 ...,  0.02043759  0.02319659
+  0.02767026]
+iteration: 7 mape: 0.000753879226171 over 5 percent: 0 over 10 percent: 0
+
+target-values for samples with errors above 5 percent:
+[]
+target-values for samples with errors above 10 percent:
+[]
+representation inputs for samples with errors above 5 percent:
+[]
+representation inputs for samples with errors above 10 percent:
+[]
