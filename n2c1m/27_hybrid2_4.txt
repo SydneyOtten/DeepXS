@@ -1,0 +1,10 @@
+iteration: 1 mape: [ 0.00951258] over 5 percent: 134 over 10 percent: 10
+iteration: 2 mape: [ 0.00588391] over 5 percent: 12 over 10 percent: 2
+iteration: 3 mape: [ 0.00334627] over 5 percent: 4 over 10 percent: 3
+iteration: 4 mape: [ 0.00236317] over 5 percent: 2 over 10 percent: 2
+iteration: 5 mape: [ 0.0020933] over 5 percent: 3 over 10 percent: 2
+iteration: 6 mape: [ 0.00195836] over 5 percent: 2 over 10 percent: 2
+iteration: 7 mape: [ 0.0017085] over 5 percent: 3 over 10 percent: 2
+iteration: 8 mape: [ 0.00159076] over 5 percent: 2 over 10 percent: 2
+iteration: 9 mape: [ 0.00153626] over 5 percent: 2 over 10 percent: 2
+iteration: 10 mape: [ 0.00152456] over 5 percent: 2 over 10 percent: 2
