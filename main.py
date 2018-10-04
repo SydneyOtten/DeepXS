@@ -814,7 +814,7 @@ if int(args.stream) == 0:
 	for i in c1c1_occurences:
 		if i == setting:
 			c1c1_LO_data, c1c1_NLO_data = preprocess_c1c1(input_data, LO=1, NLO=1, Array=Array)
-			c1c1_LO_model, c1c1_NLO_model = build_c1c1_AI(LO_weightfile='./c1+c1-/c1c1_LO.hdf5', K_weightsfile='./c1+c1-/c1c1_K.hdf5', LO=1, NLO=1)
+			c1c1_LO_model, c1c1_NLO_model = build_c1c1_AI(LO_weightfile='./c1c1/c1c1_LO.hdf5', K_weightsfile='./c1c1/c1c1_K.hdf5', LO=1, NLO=1)
 			c1c1_LO, c1c1_K, c1c1_NLO = predict_c1c1(LO_data=c1c1_LO_data,NLO_data=c1c1_NLO_data,LO_model=c1c1_LO_model,NLO_model=c1c1_NLO_model,LO=1,NLO=1)
 	#n2n2
 	for i in n2n2_occurences:
@@ -826,13 +826,13 @@ if int(args.stream) == 0:
 	for i in n2c1p_occurences:
 		if i == setting:
 			n2c1p_LO_data, n2c1p_NLO_data = preprocess_n2c1p(input_data, LO=1, NLO=1, Array=Array)
-			n2c1p_LO_model_general, n2c1p_LO_model_specialised, n2c1p_NLO_model_general, n2c1p_NLO_model_specialised = build_n2c1p_AI(LO_gen_weightfile='./n2c1+/n2c1+_LO_gen.hdf5', LO_spec_weightfile='./n2c1+/n2c1+_LO_spec.hdf5', K_gen_weightsfile='./n2c1+/n2c1+_K_gen.hdf5', K_spec_weightsfile='./n2c1+/n2c1+_K_spec.hdf5', LO=1, NLO=1)
+			n2c1p_LO_model_general, n2c1p_LO_model_specialised, n2c1p_NLO_model_general, n2c1p_NLO_model_specialised = build_n2c1p_AI(LO_gen_weightfile='./n2c1p/n2c1+_LO_gen.hdf5', LO_spec_weightfile='./n2c1p/n2c1+_LO_spec.hdf5', K_gen_weightsfile='./n2c1p/n2c1+_K_gen.hdf5', K_spec_weightsfile='./n2c1p/n2c1+_K_spec.hdf5', LO=1, NLO=1)
 			n2c1p_LO, n2c1p_K, n2c1p_NLO = predict_n2c1p(LO_data=n2c1p_LO_data,NLO_data=n2c1p_NLO_data,LO_model_gen=n2c1p_LO_model_general, LO_model_spec=n2c1p_LO_model_specialised, NLO_model_gen=n2c1p_NLO_model_general, NLO_model_spec = n2c1p_NLO_model_specialised, LO=1,NLO=1)
 	#n2c1m
 	for i in n2c1m_occurences:
 		if i == setting:
 			n2c1m_LO_data, n2c1m_NLO_data = preprocess_n2c1m(input_data, LO=1, NLO=1, Array=Array)
-			n2c1m_LO_model_gen, n2c1m_LO_model_spec, n2c1m_NLO_model = build_n2c1m_AI(LO_gen_weightfile='./n2c1-/n2c1-_LO_gen.hdf5', LO_spec_weightfile='./n2c1-/n2c1-_LO_spec.hdf5', K_weightsfile='./n2c1-/n2c1-_K.hdf5', LO=1, NLO=1)
+			n2c1m_LO_model_gen, n2c1m_LO_model_spec, n2c1m_NLO_model = build_n2c1m_AI(LO_gen_weightfile='./n2c1m/n2c1-_LO_gen.hdf5', LO_spec_weightfile='./n2c1m/n2c1-_LO_spec.hdf5', K_weightsfile='./n2c1m/n2c1-_K.hdf5', LO=1, NLO=1)
 			n2c1m_LO, n2c1m_K, n2c1m_NLO = predict_n2c1m(LO_data=n2c1m_LO_data,NLO_data=n2c1m_NLO_data,LO_model_gen=n2c1m_LO_model_gen,LO_model_spec=n2c1m_LO_model_spec,NLO_model=n2c1m_NLO_model,LO=1,NLO=1)
 			
 if int(args.stream) == 1:
@@ -841,7 +841,7 @@ if int(args.stream) == 1:
 		for i in c1c1_occurences:
 			if i == setting:
 				c1c1_LO_data, c1c1_NLO_data = preprocess_c1c1(input_data, LO=1, NLO=1, Array=Array)
-				c1c1_LO_model, c1c1_NLO_model = build_c1c1_AI(LO_weightfile='./c1+c1-/c1c1_LO.hdf5', K_weightsfile='./c1+c1-/c1c1_K.hdf5', LO=1, NLO=1)
+				c1c1_LO_model, c1c1_NLO_model = build_c1c1_AI(LO_weightfile='./c1c1/c1c1_LO.hdf5', K_weightsfile='./c1c1/c1c1_K.hdf5', LO=1, NLO=1)
 				c1c1_LO, c1c1_K, c1c1_NLO = predict_c1c1(LO_data=c1c1_LO_data,NLO_data=c1c1_NLO_data,LO_model=c1c1_LO_model,NLO_model=c1c1_NLO_model,LO=1,NLO=1)
 		#n2n2
 		for i in n2n2_occurences:
@@ -853,13 +853,13 @@ if int(args.stream) == 1:
 		for i in n2c1p_occurences:
 			if i == setting:
 				n2c1p_LO_data, n2c1p_NLO_data = preprocess_n2c1p(input_data, LO=1, NLO=1, Array=Array)
-				n2c1p_LO_model_general, n2c1p_LO_model_specialised, n2c1p_NLO_model_general, n2c1p_NLO_model_specialised = build_n2c1p_AI(LO_gen_weightfile='./n2c1+/n2c1+_LO_gen.hdf5', LO_spec_weightfile='./n2c1+/n2c1+_LO_spec.hdf5', K_gen_weightsfile='./n2c1+/n2c1+_K_gen.hdf5', K_spec_weightsfile='./n2c1+/n2c1+_K_spec.hdf5', LO=1, NLO=1)
+				n2c1p_LO_model_general, n2c1p_LO_model_specialised, n2c1p_NLO_model_general, n2c1p_NLO_model_specialised = build_n2c1p_AI(LO_gen_weightfile='./n2c1p/n2c1+_LO_gen.hdf5', LO_spec_weightfile='./n2c1p/n2c1+_LO_spec.hdf5', K_gen_weightsfile='./n2c1p/n2c1+_K_gen.hdf5', K_spec_weightsfile='./n2c1p/n2c1+_K_spec.hdf5', LO=1, NLO=1)
 				n2c1p_LO, n2c1p_K, n2c1p_NLO = predict_n2c1p(LO_data=n2c1p_LO_data,NLO_data=n2c1p_NLO_data,LO_model_gen=n2c1p_LO_model_general, LO_model_spec=n2c1p_LO_model_specialised, NLO_model_gen=n2c1p_NLO_model_general, NLO_model_spec = n2c1p_NLO_model_specialised, LO=1,NLO=1)
 		#n2c1m
 		for i in n2c1m_occurences:
 			if i == setting:
 				n2c1m_LO_data, n2c1m_NLO_data = preprocess_n2c1m(input_data, LO=1, NLO=1, Array=Array)
-				n2c1m_LO_model_gen, n2c1m_LO_model_spec, n2c1m_NLO_model = build_n2c1m_AI(LO_gen_weightfile='./n2c1-/n2c1-_LO_gen.hdf5', LO_spec_weightfile='./n2c1-/n2c1-_LO_spec.hdf5', K_weightsfile='./n2c1-/n2c1-_K.hdf5', LO=1, NLO=1)
+				n2c1m_LO_model_gen, n2c1m_LO_model_spec, n2c1m_NLO_model = build_n2c1m_AI(LO_gen_weightfile='./n2c1m/n2c1-_LO_gen.hdf5', LO_spec_weightfile='./n2c1m/n2c1-_LO_spec.hdf5', K_weightsfile='./n2c1m/n2c1-_K.hdf5', LO=1, NLO=1)
 				n2c1m_LO, n2c1m_K, n2c1m_NLO = predict_n2c1m(LO_data=n2c1m_LO_data,NLO_data=n2c1m_NLO_data,LO_model_gen=n2c1m_LO_model_gen,LO_model_spec=n2c1m_LO_model_spec,NLO_model=n2c1m_NLO_model,LO=1,NLO=1)
 		#request new file
 		new_SLHA_file = input("Type 'exit' to exit.\n Otherwise, specify the file to process next: ")
