@@ -4,8 +4,5 @@ Deep Learning applied to Quantum Field Theory. An AI that predicts LHC pair prod
 Requirements:
 Recent versions of Tensorflow, Keras, Pandas and pyslha.
 
-Instructions:
-
-Run from command line with "python main.py -pairs N -return LO/NLO/both -stream 0/1/2 -Array 0/1 -fn filename"
-
-The specifications for N as well as the required input structure for Arrays are given in the readme.txt.
+Essential files are main.py, reader.py, AI_builder.py, preprocessing.py, predictors.py.
+See DeepXS_manual.pdf for instructions on how to use this tool.
