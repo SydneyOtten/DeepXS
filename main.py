@@ -126,7 +126,7 @@ if int(args.stream) == 1:
 				n2c1m_LO, n2c1m_K, n2c1m_NLO = predict_n2c1m(LO_data=n2c1m_LO_data,NLO_data=n2c1m_NLO_data,LO_model_gen=n2c1m_LO_model_gen,LO_model_spec=n2c1m_LO_model_spec,NLO_model=n2c1m_NLO_model,LO=1,NLO=1)
 		#request new file
 		new_SLHA_file = input("Type 'exit' to exit.\n Otherwise, specify the file to process next: ")
-		if new_SLHA_file == 'exit':
+		if new_SLHA_file == exit:
 			active = False
 		else:
 			input_data = read_input(new_SLHA_file, array=0)
