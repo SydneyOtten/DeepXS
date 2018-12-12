@@ -11,7 +11,7 @@ def predict_c1c1(LO_data,NLO_data,LO_model,NLO_model,LO=0,NLO=1):
 	LO_pred=np.exp(3.568339158293295288*LO_pred-4.958795503662296156)
 	LO_pred=LO_pred.astype(np.float)
 	print("\n The Chargino1/Chargino1 pair production cross-sections are: \n")
-	print("At leading order: " + str(LO_pred) + " pb\n")
+	print("At leading order: " + str(np.float(LO_pred)) + " pb\n")
 	if LO == 1 and NLO == 0:
 		print(LO_pred)
 		return LO_pred
@@ -19,10 +19,10 @@ def predict_c1c1(LO_data,NLO_data,LO_model,NLO_model,LO=0,NLO=1):
 		K_pred=NLO_model.predict(NLO_data)
 		K_pred=K_pred*2
 		K_pred=K_pred.astype(np.float)
-		print("With a K-factor of: " + str(K_pred) + " \n")
+		print("With a K-factor of: " + str(np.float(K_pred)) + " \n")
 		NLO_pred=LO_pred*K_pred
 		NLO_pred = NLO_pred.astype(np.float)
-		print("Therefore, at next-to-leading order: " + str(NLO_pred) + " pb\n")
+		print("Therefore, at next-to-leading order: " + str(np.float(NLO_pred)) + " pb\n")
 		np.savetxt('c1c1_LO_pred.txt', LO_pred)
 		np.savetxt('c1c1_K_pred.txt', K_pred)
 		np.savetxt('c1c1_NLO_pred.txt', NLO_pred)
@@ -33,17 +33,17 @@ def predict_n2n2(LO_data,NLO_data,LO_model,NLO_model,LO=0,NLO=1):
 	LO_pred=np.exp(LO_pred-14.92)
 	LO_pred=LO_pred.astype(np.float)
 	print("\n The Neutralino2/Neutralino2 pair production cross-sections are: \n")
-	print("At leading order: " + str(LO_pred) + " pb\n")
+	print("At leading order: " + str(np.float(LO_pred)) + " pb\n")
 	if LO == 1 and NLO == 0:
 		return LO_pred
 	if (LO == 1 and NLO == 1) or (LO == 0 and NLO == 1):
 		K_pred=NLO_model.predict(NLO_data)
 		K_pred = K_pred*2
 		K_pred = K_pred.astype(np.float)
-		print("With a K-factor of: " + str(K_pred) + " \n")
+		print("With a K-factor of: " + str(np.float(K_pred)) + " \n")
 		NLO_pred=LO_pred*K_pred
 		NLO_pred = NLO_pred.astype(np.float)
-		print("Therefore, at next-to-leading order: " + str(NLO_pred) + " pb\n")
+		print("Therefore, at next-to-leading order: " + str(np.float(NLO_pred)) + " pb\n")
 		np.savetxt('n2n2_LO_pred.txt', LO_pred)
 		np.savetxt('n2n2_K_pred.txt', K_pred)
 		np.savetxt('n2n2_NLO_pred.txt', NLO_pred)
@@ -76,9 +76,9 @@ def predict_n2c1p(LO_data,NLO_data,LO_model_gen,LO_model_spec,NLO_model_gen,NLO_
 				K_pred = K_pred*4
 				K_pred = K_pred.astype(np.float)
 				NLO_pred=LO_pred*K_pred
-			print("With a K-factor of: " + str(K_pred) + " \n")
-			print("Therefore, at next-to-leading order: " + str(NLO_pred) + " pb\n")
-			np.savetxt('n2c1+_LO_pred.txt', LO_pred)
+			print("With a K-factor of: " + str(np.float(K_pred)) + " \n")
+			print("Therefore, at next-to-leading order: " + str(np.float(NLO_pred)) + " pb\n")
+			np.savetxt('n2c1+_LO_pred.txt', np.array([LO_pred]))
 			np.savetxt('n2c1+_K_pred.txt', K_pred)
 			np.savetxt('n2c1+_NLO_pred.txt', NLO_pred)
 			return LO_pred, K_pred, NLO_pred
@@ -110,7 +110,7 @@ def predict_n2c1p(LO_data,NLO_data,LO_model_gen,LO_model_spec,NLO_model_gen,NLO_
 			K_pred_2 = K_pred_2*4
 			K_pred_2 = K_pred_2.astype(np.float)
 			K_pred[K_ind] = K_pred_2
-			np.savetxt('n2c1+_LO_pred.txt', LO_pred)
+			np.savetxt('n2c1+_LO_pred.txt', np.array([LO_pred]))
 			np.savetxt('n2c1+_K_pred.txt', K_pred)
 			np.savetxt('n2c1+_NLO_pred.txt', NLO_pred)
 			return LO_pred, K_pred, NLO_pred
@@ -135,11 +135,11 @@ def predict_n2c1m(LO_data,NLO_data,LO_model_gen,LO_model_spec,NLO_model,LO,NLO):
 			K_pred=NLO_model.predict(NLO_data)
 			K_pred=np.float(K_pred*4)
 			NLO_pred=LO_pred*K_pred
-			print("With a K-factor of: " + str(K_pred) + " \n")
-			print("Therefore, at next-to-leading order: " + str(NLO_pred) + " pb\n")
-			np.savetxt('n2c1-_LO_pred.txt', LO_pred)
-			np.savetxt('n2c1-_K_pred.txt', K_pred)
-			np.savetxt('n2c1-_NLO_pred.txt', NLO_pred)
+			print("With a K-factor of: " + str(np.float(K_pred)) + " \n")
+			print("Therefore, at next-to-leading order: " + str(np.float(NLO_pred)) + " pb\n")
+			np.savetxt('n2c1-_LO_pred.txt', np.array([LO_pred]))
+			np.savetxt('n2c1-_K_pred.txt', np.array([K_pred]))
+			np.savetxt('n2c1-_NLO_pred.txt', np.array([NLO_pred]))
 			return LO_pred, K_pred, NLO_pred
 	else:
 		LO_pred = LO_pred.astype(np.float)
@@ -160,7 +160,7 @@ def predict_n2c1m(LO_data,NLO_data,LO_model_gen,LO_model_spec,NLO_model,LO,NLO):
 			K_pred=K_pred*4
 			K_pred = K_pred.astype(np.float)
 			NLO_pred=LO_pred*K_pred
-			np.savetxt('n2c1-_LO_pred.txt', LO_pred)
-			np.savetxt('n2c1-_K_pred.txt', K_pred)
-			np.savetxt('n2c1-_NLO_pred.txt', NLO_pred)
+			np.savetxt('n2c1-_LO_pred.txt', np.array([LO_pred]))
+			np.savetxt('n2c1-_K_pred.txt', np.array([K_pred]))
+			np.savetxt('n2c1-_NLO_pred.txt', np.array([NLO_pred]))
 			return LO_pred, K_pred, NLO_pred
