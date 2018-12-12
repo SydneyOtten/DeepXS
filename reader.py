@@ -83,7 +83,7 @@ def read_input(filename, array = 0, fn = 'sample_1.spc'):
 		input[0,17] = msq8
 		input[0,18] = mgluino
 	elif array == 1:
-		raw_input = pd.read_csv(fn, sep=' ', header=None)
+		raw_input = pd.read_csv(filename, sep=' ', header=None)
 		input = raw_input.values
 		input = input.astype(np.float)
 	else:
